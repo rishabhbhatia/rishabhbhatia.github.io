@@ -1,0 +1,159 @@
+/** CSS reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/** my styles */
+@media only screen and (min-width: 1280px) {
+  html {
+    font-size: 1.3rem;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
+}
+
+@media only screen and (orientation: landscape) {
+  .container {
+    padding: 6% 10%;
+  }
+}
+
+@media only screen and (min-width: 992px) and (orientation: landscape) {
+  .container {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+}
+
+.hero-img {
+  height: 250px;
+  width: 250px;
+  border-radius: 5%;
+  flex-shrink: 0;
+  background: #80ADCA;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 12%;
+}
+
+@media only screen and (min-width: 992px) and (orientation: landscape) {
+  .content {
+    margin-top: 0;
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #87928F;
+  text-transform: uppercase;
+  font-family: 'Yellowtail', cursive;
+  margin-left: -10px;
+  letter-spacing: 0.3rem;
+  word-spacing: 0.75rem;
+  text-align: left;
+}
+
+@media only screen and (min-width: 992px) {
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
+.desc {
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-right: 10%;
+  margin-top: 4%;
+  letter-spacing: 0.1rem;
+  line-height: 1.75rem;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin-top: 48px;
+  gap: 24px;
+}
+
+@media only screen and (min-width: 992px) and (orientation: landscape) {
+  .social-links {
+    flex-direction: row;
+    gap: auto;
+  }
+}
+
+.social-links > li > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #87928F;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.4rem;
+}
