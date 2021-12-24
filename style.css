@@ -50,86 +50,56 @@ table {
 
 
 /** my styles */
-@media only screen and (min-width: 1280px) {
-  html {
-    font-size: 1.3rem;
-  }
-}
-
 body {
-  display: flex;
-  justify-content: center;
   background: #fff;
 }
 
 .container {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 10%;
 }
 
-@media only screen and (orientation: landscape) {
-  .container {
-    padding: 6% 10%;
-  }
-}
-
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-  .container {
-    flex-direction: row-reverse;
-    align-items: flex-start;
-  }
-}
-
 .hero-img {
-  height: 250px;
-  width: 250px;
+  height: 15rem;
+  width: 15rem;
   border-radius: 5%;
   flex-shrink: 0;
   background: #80ADCA;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  margin-top: 12%;
-}
-
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-  .content {
-    margin-top: 0;
-  }
-}
-
 .title {
   margin: 0;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
-  color: #87928F;
-  text-transform: uppercase;
+  color: #1CBDB4;
   font-family: 'Yellowtail', cursive;
-  margin-left: -10px;
+  margin-left: -5px;
   letter-spacing: 0.3rem;
-  word-spacing: 0.75rem;
+  word-spacing: 0.25rem;
   text-align: left;
+  margin-top: 10%;
 }
 
-@media only screen and (min-width: 992px) {
-  .title {
-    font-size: 3.5rem;
-  }
+.role {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #8AA5BD;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.25rem;
+  margin-top: 12px;
 }
 
 .desc {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 400;
   padding-right: 10%;
-  margin-top: 4%;
-  letter-spacing: 0.1rem;
+  margin-top: 12%;
   line-height: 1.75rem;
+  color: #8AA5BD;
+  color: #383838;
+  color: #07324F;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .social-links {
@@ -142,18 +112,78 @@ body {
   gap: 24px;
 }
 
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-  .social-links {
-    flex-direction: row;
-    gap: auto;
-  }
-}
-
 .social-links > li > a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #87928F;
+  color: #1CBDB4;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.4rem;
+}
+
+@media only screen and (min-width: 375px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .role {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 5% 8%;
+  }
+
+  .title {
+    margin-top: 0;
+  }
+
+  .hero-img {
+    float: right;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .desc {
+    margin-top: 6%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .title {
+    font-size: 4rem;
+    word-spacing: 0.75rem;
+    margin-left: -10px;
+  }
+  
+  .role {
+    font-size: 1.25rem;
+    word-spacing: 0.5rem;
+  }
+
+  .desc {
+    margin-top: 5%;
+    font-size: 1.25rem;
+  }
+
+  .social-links {
+    flex-direction: row;
+    gap: unset;
+    margin-top: 6%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  html {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  html {
+    font-size: 2rem;
+  }
 }
