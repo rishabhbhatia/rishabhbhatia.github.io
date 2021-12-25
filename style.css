@@ -48,10 +48,22 @@ table {
 	border-spacing: 0;
 }
 
+/** theming */
+:root {
+  --font-color: #07324F;
+  --font-color-title: #1CBDB4;
+  --font-color-secondary: #8AA5BD;
+  --bg-color: #fff;
+}
+
+[data-theme="dark"] {
+  --font-color: #8AA5BD;
+  --bg-color: #28282B;
+}
 
 /** my styles */
 body {
-  background: #fff;
+  background: var(--bg-color);
 }
 
 .container {
@@ -63,14 +75,14 @@ body {
   width: 15rem;
   border-radius: 5%;
   flex-shrink: 0;
-  background: #80ADCA;
+  background: var(--font-color-secondary);
 }
 
 .title {
   margin: 0;
   font-size: 2rem;
   font-weight: 900;
-  color: #1CBDB4;
+  color: var(--font-color-title);
   font-family: 'Yellowtail', cursive;
   margin-left: -5px;
   letter-spacing: 0.3rem;
@@ -83,7 +95,7 @@ body {
 .role {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #8AA5BD;
+  color: var(--font-color-secondary);
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.2rem;
@@ -97,9 +109,7 @@ body {
   padding-right: 10%;
   margin-top: 12%;
   line-height: 1.75rem;
-  color: #8AA5BD;
-  color: #383838;
-  color: #07324F;
+  color: var(--font-color);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -116,7 +126,7 @@ body {
 .social-links > li > a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #1CBDB4;
+  color: var(--font-color-title);
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.4rem;
