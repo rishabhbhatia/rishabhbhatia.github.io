@@ -4,7 +4,9 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 };
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-  const newColorScheme = e.matches ? "dark" : "light";
-  console.log('color scheme changed', newColorScheme);
-  document.documentElement.setAttribute('data-theme', newColorScheme);
+  if(e.matches) {
+    document.documentElement.setAttribute('data-theme', "dark");
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
 });
