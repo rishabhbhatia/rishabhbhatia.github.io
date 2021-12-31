@@ -73,6 +73,8 @@ body {
 .hero-img {
   height: 15rem;
   width: 15rem;
+  max-height: 240px;
+  max-width: 240px;
   border-radius: 5%;
   flex-shrink: 0;
   background: var(--font-color-secondary);
@@ -89,7 +91,6 @@ body {
   word-spacing: 0.25rem;
   text-align: left;
   margin-top: 10%;
-  white-space: nowrap;
 }
 
 .role {
@@ -123,6 +124,10 @@ body {
   gap: 24px;
 }
 
+.social-links > li {
+  text-align: center;
+}
+
 .social-links > li > a {
   text-decoration: none;
   text-transform: uppercase;
@@ -130,6 +135,7 @@ body {
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.4rem;
+  overflow-wrap: anywhere;
 }
 
 @media only screen and (min-width: 375px) {
@@ -188,12 +194,22 @@ body {
 }
 
 @media only screen and (min-width: 1440px) {
+  .hero-img {
+    max-height: 300px;
+    max-width: 300px;
+  }
+
   html {
     font-size: 1.25rem;
   }
 }
 
 @media only screen and (min-width: 2560px) {
+  .hero-img {
+    max-height: 480px;
+    max-width: 480px;
+  }
+
   html {
     font-size: 2rem;
   }
