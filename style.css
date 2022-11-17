@@ -4,48 +4,135 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /** theming */
@@ -54,11 +141,13 @@ table {
   --font-color-title: #1CBDB4;
   --font-color-secondary: #8AA5BD;
   --bg-color: #fff;
+  --img-filter: 1;
 }
 
 [data-theme="dark"] {
   --font-color: #8AA5BD;
   --bg-color: #28282B;
+  --img-filter: 0;
 }
 
 /** my styles */
@@ -68,6 +157,7 @@ body {
 
 .container {
   padding: 10%;
+  position: relative;
 }
 
 .hero-img {
@@ -124,11 +214,11 @@ body {
   gap: 24px;
 }
 
-.social-links > li {
+.social-links>li {
   text-align: center;
 }
 
-.social-links > li > a {
+.social-links>li>a {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--font-color-title);
@@ -138,11 +228,25 @@ body {
   overflow-wrap: anywhere;
 }
 
+.footer-scribble {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.footer-scribble-img {
+  height: 60px;
+  width: auto;
+  filter: invert(var(--img-filter));
+}
+
 @media only screen and (min-width: 375px) {
   .title {
     font-size: 2.25rem;
   }
-  
+
   .role {
     font-size: 1rem;
     font-weight: 600;
@@ -175,7 +279,7 @@ body {
     word-spacing: 0.75rem;
     margin-left: -10px;
   }
-  
+
   .role {
     font-size: 1.25rem;
     word-spacing: 0.5rem;
@@ -190,6 +294,13 @@ body {
     flex-direction: row;
     gap: unset;
     margin-top: 6%;
+  }
+
+  .footer-scribble {
+    width: auto;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
   }
 }
 
